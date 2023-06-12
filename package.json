@@ -1,0 +1,36 @@
+{
+  "name": "@psenger/globtoregex",
+  "version": "1.0.0",
+  "description": "Glob to RegEx - lightweight tool to convert Apache Glob for Unix to a Regular Expression",
+  "main": "index.js",
+  "source": "index.js",
+  "private": false,
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psenger/globtoregex.git"
+  },
+  "keywords": [
+    "glob",
+    "regex",
+    "regularexpresion"
+  ],
+  "author": "Philip A Senger <philip.a.senger@cngrgroup.com>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/psenger/globtoregex/issues"
+  },
+  "homepage": "https://github.com/psenger/globtoregex#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "clearMocks": true,
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coverageProvider": "v8"
+  }
+}
