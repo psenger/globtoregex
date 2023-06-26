@@ -185,4 +185,16 @@ describe('globToRegex', () => {
         // expect(regex.test('fileA.txt')).toBe(false);
         // expect(regex.test('fileB.txt')).toBe(false);
     });
+    test('Match real world test', () => {
+        const globPattern = '**';
+        const regex = globToRegex(globPattern);
+        expect(regex.test('file_0.bin')).toBe(true);
+        expect(regex.test('dir_5_2/file_0.bin')).toBe(true);
+        expect(regex.test('dir_5_2/dir_4_0/file_0.bin')).toBe(true);
+        expect(regex.test('dir_5_2/dir_4_0/dir_3_0/file_0.bin')).toBe(true);
+        expect(regex.test('dir_5_2/dir_4_0/dir_3_0/file_1.bin')).toBe(true);
+        expect(regex.test('dir_5_2/dir_4_0/dir_3_1/dir_2_0/dir_1_1/file_0.bin')).toBe(true);
+        expect(regex.test('dir_5_2/dir_4_0/dir_3_1/dir_2_0/dir_1_1/file_1.bin')).toBe(true);
+        expect(regex.test('dir_5_2/dir_4_0/dir_3_1/dir_2_0/dir_1_1/file_2.bin')).toBe(true);
+    })
 });
